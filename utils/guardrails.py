@@ -34,7 +34,7 @@ def is_off_topic(text):
     text = text.lower()
 
     insurance_keywords = [
-        "insurance", "claim", "policy", "accident", "vehicle",
+        "insurance", "claim", "file claim", "policy", "accident", "vehicle",
         "car", "bike", "motor", "hospital", "medical", "surgery",
         "death", "nominee", "travel", "baggage", "theft",
         "damage", "claim process", "documents"

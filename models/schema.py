@@ -22,7 +22,7 @@ class ClaimResponse(BaseModel):
     # Confidence score (0 to 1)
     confidence: float = Field(..., ge=0.0, le=1.0)
 
-    # ✅ Optional advanced fields (for evaluation / debugging)
+    # fields (for evaluation / debugging)
     reasoning: Optional[str] = Field(
         default=None,
         description="Internal reasoning (hidden in UI, used for debugging)"
@@ -33,7 +33,7 @@ class ClaimResponse(BaseModel):
         description="List of triggered guardrails (PII, injection, etc.)"
     )
 
-    # ✅ Validation Rules
+    # Validation Rules
     @field_validator("fraud_risk")
     def validate_fraud_risk(cls, value):
         allowed = ["Low", "Medium", "High"]

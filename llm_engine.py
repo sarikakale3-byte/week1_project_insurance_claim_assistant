@@ -25,7 +25,7 @@ def detect_product(query):
         if any(k in q for k in keywords):
             return product
 
-    # ✅ NEW: handle generic claim queries
+    # handle generic claim queries
     if "claim" in q:
         return "general"
 
@@ -38,11 +38,11 @@ def run_llm(query,system_prompt):
     #prompt = build_prompt(query, product_info)
     #print(f"BUILT prompt = {prompt}")
 
-   # ✅ Detect product
+   # Detect product
     product_key = detect_product(query)
     product_info = PRODUCTS.get(product_key, {})
 
-    # ✅ ✅ NEW: fallback for generic claim queries ✅ ✅
+    # fallback for generic claim queries, this i added because when i was giving prompt like "what are next steps to file claim" it was not able to identify product and failing back to consider it as offtopic qstn
     if product_key == "general":
         product_info = {
             "name": "General Insurance",
@@ -58,13 +58,13 @@ def run_llm(query,system_prompt):
             "fraud_indicators": ["Delayed reporting", "Missing documents"]
         }
 
-    # ✅ ✅ fallback for unknown
+    # fallback for unknown
     if not product_info:
         product_info = {
             "name": "Unknown Product"
         }
 
-    # ✅ Build prompt with ONLY relevant product
+    #Build prompt with ONLY relevant product
     prompt = build_prompt(query, product_info)
 
     #prompt=query
