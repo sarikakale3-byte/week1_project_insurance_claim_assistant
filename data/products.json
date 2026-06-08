@@ -1,0 +1,116 @@
+{
+    "products": {
+        "motor_insurance": {
+            "name": "SK Motor Insurance",
+            "coverage": [
+                "Accidental damage",
+                "Third-party liability",
+                "Theft protection",
+                "Natural calamities"
+            ],
+            "eligibility": "Valid driving license and active vehicle registration",
+            "required_documents": [
+                "Policy document",
+                "Driving license",
+                "Vehicle RC",
+                "Accident photos",
+                "FIR (if applicable)"
+            ],
+            "claim_process": [
+                "Register claim",
+                "Upload documents",
+                "Vehicle inspection",
+                "Claim settlement"
+            ],
+            "fraud_indicators": [
+                "Delayed claim reporting",
+                "Multiple claims in short period",
+                "Inconsistent damage evidence"
+            ]
+        },
+
+        "health_insurance": {
+            "name": "SK Health Plan",
+            "coverage": [
+                "Hospitalization",
+                "Surgeries",
+                "Daycare procedures",
+                "Pre & post hospitalization"
+            ],
+            "eligibility": "Active policy with waiting period conditions",
+            "required_documents": [
+                "Policy document",
+                "Hospital bills",
+                "Discharge summary",
+                "Medical reports",
+                "Doctor prescription"
+            ],
+            "claim_process": [
+                "Pre-authorization (cashless)",
+                "Submit documents",
+                "Medical review",
+                "Claim settlement"
+            ],
+            "fraud_indicators": [
+                "Fake or inflated billing",
+                "Unnecessary hospitalization",
+                "Repeated claims from same provider"
+            ]
+        },
+
+        "life_insurance": {
+            "name": "SK Life Shield",
+            "coverage": [
+                "Death benefit",
+                "Maturity benefit",
+                "Critical illness rider"
+            ],
+            "eligibility": "Active policy with premiums paid",
+            "required_documents": [
+                "Policy document",
+                "Death certificate",
+                "Nominee ID proof",
+                "Medical history records"
+            ],
+            "claim_process": [
+                "Submit claim form",
+                "Document verification",
+                "Underwriting review",
+                "Payout to nominee"
+            ],
+            "fraud_indicators": [
+                "Early claims after policy issuance",
+                "Incorrect nominee details",
+                "Non-disclosure of health conditions"
+            ]
+        },
+
+        "travel_insurance": {
+            "name": "SK Travel Protect",
+            "coverage": [
+                "Trip cancellation",
+                "Medical emergencies abroad",
+                "Lost baggage",
+                "Flight delays"
+            ],
+            "eligibility": "Valid policy during travel period",
+            "required_documents": [
+                "Travel tickets",
+                "Passport",
+                "Policy document",
+                "Expense receipts"
+            ],
+            "claim_process": [
+                "Report incident",
+                "Submit documents",
+                "Verification",
+                "Claim settlement"
+            ],
+            "fraud_indicators": [
+                "Duplicate claims",
+                "Missing travel proof",
+                "Exaggerated expense claims"
+            ]
+        }
+    }
+}
