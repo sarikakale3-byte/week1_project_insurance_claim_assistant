@@ -8,13 +8,10 @@ redis_client = Redis.from_url(
     decode_responses=True # Important for getting strings back
 )
 
-
-# -----------------------------
 # Chat Memory
-# -----------------------------
 def append_chat(session_id: str, role: str, message: str):
     key = f"{session_id}:chat_history"
-    print("✅ Saving to Redis:", session_id, role, message)
+    print("Saving to Redis:", session_id, role, message)
     
     history = redis_client.get(key)
     history = json.loads(history) if history else []
@@ -35,9 +32,7 @@ def get_chat_history(session_id: str):
     return json.loads(val) if val else []
 
 
-# -----------------------------
 # Optional: Structured memory (intent etc.)
-# -----------------------------
 def save_context(session_id: str, key: str, value: dict):
     redis_client.set(
         f"{session_id}:{key}",
