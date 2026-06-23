@@ -1,1 +1,249 @@
-[]
+[
+  {
+    "query": "I had a car accident yesterday",
+    "response": {
+      "product": "SK Motor Insurance",
+      "intent": "claim_intake",
+      "summary": "User wants to file a claim for a car accident",
+      "eligibility": "Valid driving license and active vehicle registration required",
+      "required_documents": [
+        "Policy document",
+        "Driving license",
+        "Vehicle RC",
+        "Accident photos",
+        "FIR (if applicable)"
+      ],
+      "fraud_risk": "Low",
+      "next_steps": [
+        "Register claim",
+        "Upload documents",
+        "Vehicle inspection"
+      ],
+      "confidence": 0.95,
+      "reasoning": null,
+      "guardrail_flags": []
+    },
+    "timestamp": "2026-06-09T04:23:22.249234"
+  },
+  {
+    "query": "My car was stolen",
+    "response": {
+      "product": "SK Motor Insurance",
+      "intent": "claim_intake",
+      "summary": "User wants to file a claim for stolen car",
+      "eligibility": "If policy active and valid DL",
+      "required_documents": [
+        "Policy document",
+        "Driving license",
+        "Vehicle RC",
+        "FIR"
+      ],
+      "fraud_risk": "Medium",
+      "next_steps": [
+        "Register claim",
+        "Upload documents",
+        "Vehicle inspection"
+      ],
+      "confidence": 0.92,
+      "reasoning": null,
+      "guardrail_flags": []
+    },
+    "timestamp": "2026-06-09T04:23:27.728644"
+  },
+  {
+    "query": "I was hospitalized for surgery",
+    "response": {
+      "product": "SK Health Plan",
+      "intent": "claim_intake",
+      "summary": "User wants to claim medical expenses after hospitalization for surgery",
+      "eligibility": "Subject to waiting period conditions",
+      "required_documents": [
+        "Policy document",
+        "Hospital bills",
+        "Discharge summary",
+        "Medical reports",
+        "Doctor prescription"
+      ],
+      "fraud_risk": "Low",
+      "next_steps": [
+        "Submit required documents",
+        "Medical review",
+        "Claim settlement"
+      ],
+      "confidence": 0.95,
+      "reasoning": null,
+      "guardrail_flags": []
+    },
+    "timestamp": "2026-06-09T04:23:32.931941"
+  },
+  {
+    "query": "How to claim after death?",
+    "response": {
+      "product": "SK Life Shield",
+      "intent": "claim_intake",
+      "summary": "User inquiring about claiming life insurance after death.",
+      "eligibility": "Eligible if policy is active and valid nominee is registered.",
+      "required_documents": [
+        "Policy document",
+        "Death certificate",
+        "Nominee ID proof",
+        "Medical history records"
+      ],
+      "fraud_risk": "Medium",
+      "next_steps": [
+        "Submit claim form",
+        "Document verification",
+        "Underwriting review",
+        "Payout to nominee"
+      ],
+      "confidence": 0.93,
+      "reasoning": null,
+      "guardrail_flags": []
+    },
+    "timestamp": "2026-06-09T04:23:41.536072"
+  },
+  {
+    "query": "My baggage was lost during travel",
+    "response": {
+      "product": "SK Travel Protect",
+      "intent": "claim_intake",
+      "summary": "User wants to claim for lost baggage during travel",
+      "eligibility": "Eligible if loss occurred during insured travel period",
+      "required_documents": [
+        "Policy document",
+        "Travel tickets",
+        "Passport",
+        "Expense receipts"
+      ],
+      "fraud_risk": "Low",
+      "next_steps": [
+        "Report incident",
+        "Submit documents",
+        "Verification",
+        "Claim settlement"
+      ],
+      "confidence": 0.93,
+      "reasoning": null,
+      "guardrail_flags": []
+    },
+    "timestamp": "2026-06-09T04:23:46.255216"
+  },
+  {
+    "query": "Flight delay claim process",
+    "response": {
+      "product": "SK Travel Protect",
+      "intent": "claim_intake",
+      "summary": "User inquiring about flight delay claim process",
+      "eligibility": "Eligible if policy is valid during travel period",
+      "required_documents": [
+        "Travel tickets",
+        "Policy document",
+        "Expense receipts"
+      ],
+      "fraud_risk": "Low",
+      "next_steps": [
+        "Report incident",
+        "Submit documents",
+        "Verification",
+        "Claim settlement"
+      ],
+      "confidence": 0.93,
+      "reasoning": null,
+      "guardrail_flags": []
+    },
+    "timestamp": "2026-06-09T04:23:52.158610"
+  },
+  {
+    "query": "I reported accident after 10 days",
+    "response": {
+      "product": "SK Motor Insurance",
+      "intent": "policy_validation",
+      "summary": "User reported accident after 10 days",
+      "eligibility": "May be affected due to delayed reporting",
+      "required_documents": [
+        "Policy document",
+        "Accident details"
+      ],
+      "fraud_risk": "Medium",
+      "next_steps": [
+        "Provide valid reason for delay",
+        "Submit claim",
+        "Await verification"
+      ],
+      "confidence": 0.91,
+      "reasoning": null,
+      "guardrail_flags": []
+    },
+    "timestamp": "2026-06-09T04:24:02.787397"
+  },
+  {
+    "query": "I lost bills for surgery can I claim?",
+    "response": {
+      "product": "SK Health Plan",
+      "intent": "claim_intake",
+      "summary": "User lost bills for surgery and is inquiring about claiming expenses",
+      "eligibility": "Subject to waiting period",
+      "required_documents": [
+        "Policy document",
+        "Discharge summary",
+        "Medical reports",
+        "Doctor prescription"
+      ],
+      "fraud_risk": "Medium",
+      "next_steps": [
+        "Try to obtain duplicate bills from the hospital",
+        "Submit documents once available"
+      ],
+      "confidence": 0.85,
+      "reasoning": null,
+      "guardrail_flags": []
+    },
+    "timestamp": "2026-06-09T04:24:06.599203"
+  },
+  {
+    "query": "Multiple claims recently is it ok?",
+    "response": {
+      "product": "General Insurance",
+      "intent": "fraud_check",
+      "summary": "User asking about the implications of multiple claims",
+      "eligibility": "Depending on policy and claim legitimacy",
+      "required_documents": [
+        "Policy document",
+        "ID proof"
+      ],
+      "fraud_risk": "Medium",
+      "next_steps": [
+        "Review the details of each claim",
+        "Ensure all documents are submitted correctly"
+      ],
+      "confidence": 0.85,
+      "reasoning": null,
+      "guardrail_flags": []
+    },
+    "timestamp": "2026-06-09T04:24:10.338272"
+  },
+  {
+    "query": "I had accident, reported late and lost documents, can I claim?",
+    "response": {
+      "product": "SK Motor Insurance",
+      "intent": "claim_intake",
+      "summary": "User wants to claim after an accident but reported it late and lost documents",
+      "eligibility": "Claim may be affected due to late reporting and missing documents",
+      "required_documents": [
+        "Policy document",
+        "Accident details",
+        "Any remaining documents"
+      ],
+      "fraud_risk": "Medium",
+      "next_steps": [
+        "Provide reason for the delay",
+        "Gather any available documents",
+        "Contact insurer for guidance"
+      ],
+      "confidence": 0.85,
+      "reasoning": null,
+      "guardrail_flags": []
+    },
+    "timestamp": "2026-06-09T04:24:14.978137"
+  }
+]
